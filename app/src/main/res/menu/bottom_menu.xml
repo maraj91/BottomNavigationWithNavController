@@ -12,6 +12,6 @@
 
     <item
             android:id="@+id/fragmentThree"
-            android:icon="@drawable/ic_home"
+            android:icon="@drawable/ic_notifications"
             android:title="tab3"/>
 </menu>

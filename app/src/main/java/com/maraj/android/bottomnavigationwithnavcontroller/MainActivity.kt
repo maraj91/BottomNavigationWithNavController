@@ -6,8 +6,11 @@ import android.view.View
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import kotlinx.android.synthetic.main.activity_main.*
-import androidx.navigation.NavDestination
 import androidx.navigation.ui.setupWithNavController
+import android.view.LayoutInflater
+import android.support.design.internal.BottomNavigationItemView
+import android.support.design.internal.BottomNavigationMenuView
+import android.widget.TextView
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,5 +39,19 @@ class MainActivity : AppCompatActivity() {
                 }
             }
         }
+
+        setBadge()
+    }
+
+    private fun setBadge() {
+        val bottomNavigationMenuView = bottom_navigation_view.getChildAt(0) as BottomNavigationMenuView
+        val v = bottomNavigationMenuView.getChildAt(2)
+        val itemView = v as BottomNavigationItemView
+
+        val badge = LayoutInflater.from(this)
+            .inflate(R.layout.badge_layout, bottomNavigationMenuView, false)
+        val tv = badge.findViewById<TextView>(R.id.notificationsBadgeTextView)
+        tv.text = "22+"
+        itemView.addView(badge)
     }
 }
