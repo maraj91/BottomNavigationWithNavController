@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/my_navigation"
+            app:startDestination="@id/fragmentOne">
+
+    <fragment android:id="@+id/fragmentOne"
+              android:name="com.maraj.android.bottomnavigationwithnavcontroller.FragmentOne"
+              android:label="fragment_fragment_one" tools:layout="@layout/fragment_fragment_one">
+        <action android:id="@+id/action_fragmentOne_to_fragmentFour" app:destination="@id/fragmentFour"
+                app:enterAnim="@anim/slide_in_right" app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left" app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+    <fragment android:id="@+id/fragmentTwo"
+              android:name="com.maraj.android.bottomnavigationwithnavcontroller.FragmentTwo"
+              android:label="fragment_fragment_two" tools:layout="@layout/fragment_fragment_two">
+
+    </fragment>
+    <fragment android:id="@+id/fragmentThree"
+              android:name="com.maraj.android.bottomnavigationwithnavcontroller.FragmentThree"
+              android:label="FragmentThree"
+              tools:layout="@layout/fragment_fragment3">
+
+    </fragment>
+    <fragment android:id="@+id/fragmentFour"
+              android:name="com.maraj.android.bottomnavigationwithnavcontroller.FragmentFour"
+              android:label="fragment_fragment_four"
+              tools:layout="@layout/fragment_fragment_four"/>
+</navigation>
